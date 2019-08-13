@@ -52,7 +52,8 @@ class Bikeexchange_Produktexport_Model_Catalog_Product_Api extends Mage_Catalog_
             'special_to_date' => $product->getSpecialToDate(),
             'tier_price' => $product->getTierPrice(),
             'qty'        => $product->getStockItem()->getQty(),
-            'is_in_stock'=> $product->getStockItem()->getIsInStock()
+            'is_in_stock'=> $product->getStockItem()->getIsInStock(),
+            'is_available' => $product->isAvailable() ? 'yes' : 'no'
         );
         foreach ($product->getTypeInstance(true)->getEditableAttributes($product) as $attribute)
         {
@@ -97,6 +98,7 @@ class Bikeexchange_Produktexport_Model_Catalog_Product_Api extends Mage_Catalog_
                 'meta_description' => $product->getData('meta_description'),
                 'qty'        => $product->getStockItem()->getQty(),
                 'is_in_stock'=> $product->getStockItem()->getIsInStock(),
+                'is_available' => $product->isAvailable() ? 'yes' : 'no',
                 'image_url'  => Mage::helper('catalog/product')->getImageUrl($product),
                 'images'     => $product->getMediaGalleryImages()
             );

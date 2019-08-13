@@ -28,6 +28,7 @@
                     <xsd:element name="tier_price" type="typens:catalogProductTierPriceEntityArray" minOccurs="0" />
                     <xsd:element name="qty" type="xsd:string" minOccurs="0" />
                     <xsd:element name="is_in_stock" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="is_available" type="xsd:string" minOccurs="0" />
                 </xsd:sequence>
             </xsd:complexType>
             <xsd:complexType name="bikeexchangeProductArray">
@@ -63,6 +64,7 @@
                   <xsd:element name="meta_description" type="xsd:string" minOccurs="0" />
                   <xsd:element name="qty" type="xsd:string" minOccurs="0" />
                   <xsd:element name="is_in_stock" type="xsd:string" minOccurs="0" />
+                  <xsd:element name="is_available" type="xsd:string" minOccurs="0" />
                   <xsd:element name="image_url" type="xsd:string" minOccurs="0" />
                   <xsd:element name="images" type="typens:catalogProductImageEntityArray" minOccurs="0" />
                   <xsd:element name="attributes" type="xsd:string" minOccurs="0" />
