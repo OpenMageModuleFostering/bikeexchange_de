@@ -2,7 +2,7 @@
   <modules>
     <Bikeexchange_Produktexport>
       <active>true</active>
-      <codePool>local</codePool>
+      <codePool>community</codePool>
     </Bikeexchange_Produktexport>
   </modules>
 </config>

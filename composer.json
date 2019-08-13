@@ -3,7 +3,7 @@
     "type": "magento-module",
     "license": "Open-Software-License-(OSL)",
     "homepage": "",
-    "description": "Stellt Funktionen für den BikeExchange DE Update Service bereit.",
+    "description": "Die Extension erweitert die SOAP v2 API um zwei Funktionen, die genau für den BikeExchange DE Update Service ausgelegt sind.",
     "authors": [
     {
         "name": "Hagen Schwa\u00df",

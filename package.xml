@@ -1,19 +1,24 @@
 <?xml version="1.0"?>
 <package>
     <name>BikeExchange_DE</name>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <stability>stable</stability>
     <license uri="http://opensource.org/licenses/osl-3.0.php">Open Software License (OSL)</license>
     <channel>community</channel>
     <extends/>
-    <summary>Stellt Funktionen f&#xFC;r den BikeExchange DE Update Service bereit.</summary>
-    <description>Die Extension ist f&#xFC;r BikeExchange DE Kunden, die den BikeExchange Update Service nutzen wollen. Der BikeExchange Update Service aktualisiert Lagerbest&#xE4;nde, Angebotspreise und organisiert die Auftragsabwicklung. Au&#xDF;erdem werden Produktdaten bereitgestellt.</description>
-    <notes>Productfeed&#xD;
-Availabilityfeed</notes>
+    <summary>Die Extension erweitert die SOAP v2 API um zwei Funktionen, die genau f&#xFC;r den BikeExchange DE Update Service ausgelegt sind.</summary>
+    <description>Es werden zwei Funktionen zur SOAP v2 API hinzugef&#xFC;gt. &#xD;
+&#xD;
+Die erste, die "Availability" genannt wird, wird h&#xE4;ufig frequentiert, um die auf BikeExchange DE ver&#xF6;ffentlichten Anzeigen bez&#xFC;glich Lagerbestand und Angebotspreis aktuell zu halten. &#xD;
+&#xD;
+Die zweite Funktion wird "Produktexport" genannt. Diese wird bei Bedarf vom BikeExchange DE Product Team &#xFC;ber einen Client abgefragt, um Produktdaten f&#xFC;r die Erstellung von Anzeigen auf BikeExchange DE zu erhalten. Der "Produktexport" ist genau auf die Bed&#xFC;rfnisse zur Anzeigenerstellung in der Fahrrad Industrie zugeschnitten.&#xD;
+&#xD;
+Die SOAP v2 API muss im WS-I Compliance Mode betrieben werden um .NET zu unterst&#xFC;tzen.</description>
+    <notes>Migrated the extension from local to community code pool.</notes>
     <authors><author><name>Hagen Schwa&#xDF;</name><user>hagens</user><email>bikeexchange@hagenschwass.name</email></author></authors>
-    <date>2017-02-16</date>
-    <time>16:39:50</time>
-    <contents><target name="magelocal"><dir name="Bikeexchange"><dir name="Produktexport"><dir name="Helper"><file name="Data.php" hash="6a59185f3a1ecbe68cb845b6525f997d"/></dir><dir name="Model"><dir name="Catalog"><dir name="Product"><dir name="Api"><file name="V2.php" hash="8af7de3830297ee52215de8271de4efe"/></dir><file name="Api.php" hash="c045b16d7fca72a020f4c54cf04a30ce"/></dir></dir></dir><dir name="etc"><file name="api.xml" hash="e82ea342aeadaf59d0e96cc3424ab1ae"/><file name="config.xml" hash="400664fde2261f4a74713a81dc8ef0b2"/><file name="wsi.xml" hash="a42fe0c0091a18e3ca36039c604afcfe"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Bikeexchange_Produktexport.xml" hash="3f65e0b66b7a7e7dc690dded74491885"/></dir></target></contents>
+    <date>2017-03-02</date>
+    <time>09:48:46</time>
+    <contents><target name="magecommunity"><dir name="Bikeexchange"><dir name="Produktexport"><dir name="Helper"><file name="Data.php" hash="6a59185f3a1ecbe68cb845b6525f997d"/></dir><dir name="Model"><dir name="Catalog"><dir name="Product"><dir name="Api"><file name="V2.php" hash="8af7de3830297ee52215de8271de4efe"/></dir><file name="Api.php" hash="c045b16d7fca72a020f4c54cf04a30ce"/></dir></dir></dir><dir name="etc"><file name="api.xml" hash="e82ea342aeadaf59d0e96cc3424ab1ae"/><file name="config.xml" hash="5eb4d9e91e1e8636f57ae123bc92f951"/><file name="wsi.xml" hash="a42fe0c0091a18e3ca36039c604afcfe"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Bikeexchange_Produktexport.xml" hash="fea0bff88a09bd200e810f7b6b38a888"/></dir></target></contents>
     <compatible/>
-    <dependencies><required><php><min>5.4.0</min><max>5.6.0</max></php></required></dependencies>
+    <dependencies><required><php><min>5.4.0</min><max>5.6.0</max></php><package><name>Mage_Core_Modules</name><channel>community</channel><min>1.6.0.0</min><max>1.9.3.2</max></package></required></dependencies>
 </package>
