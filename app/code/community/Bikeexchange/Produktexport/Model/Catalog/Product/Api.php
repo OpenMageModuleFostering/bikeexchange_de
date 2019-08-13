@@ -57,9 +57,12 @@ class Bikeexchange_Produktexport_Model_Catalog_Product_Api extends Mage_Catalog_
         );
         foreach ($product->getTypeInstance(true)->getEditableAttributes($product) as $attribute)
         {
-          if (in_array(strtolower($attribute->getAttributeCode()), $this->possiblebarcodefields) && !empty($product->getData($attribute->getAttributeCode())))
+          $attributecode = $attribute->getAttributeCode();
+          $attributecodelower = strtolower($attributecode);
+          $productdata = $product->getData($attributecode);
+          if (in_array($attributecodelower, $this->possiblebarcodefields) && !empty($productdata))
           {
-            $item['barcode'] = $product->getData($attribute->getAttributeCode());
+            $item['barcode'] = $product->getData($attributecode);
           }
         }
         $result[] = $item;
@@ -105,31 +108,34 @@ class Bikeexchange_Produktexport_Model_Catalog_Product_Api extends Mage_Catalog_
             $item['attributes'] = '';
             foreach ($product->getTypeInstance(true)->getEditableAttributes($product) as $attribute)
             {
-              $item['attributes'] .= $attribute->getAttributeCode().';';
-              if (in_array(strtolower($attribute->getAttributeCode()), $this->possiblebarcodefields))
+              $attributecode = $attribute->getAttributeCode();
+              $item['attributes'] .= $attributecode.';';
+              $attributecodelower = strtolower($attributecode);
+              $productdata = $product->getData($attributecode);
+              if (in_array($attributecodelower, $this->possiblebarcodefields))
               {
-                if (!empty($product->getData($attribute->getAttributeCode())))
+                if (!empty($productdata))
                 {
-                  $item['barcode'] = $product->getData($attribute->getAttributeCode());
+                  $item['barcode'] = $product->getData($attributecode);
                 }
                 else {
                   $item['barcode'] = 'empty';
                 }
               }
-              else if (in_array(strtolower($attribute->getAttributeCode()), $this->possiblebrandfields))
+              else if (in_array($attributecodelower, $this->possiblebrandfields))
               {
-                if (!empty($product->getData($attribute->getAttributeCode())))
+                if (!empty($productdata))
                 {
-                  $item['brand'] = $product->getData($attribute->getAttributeCode())
-                  .'-'.$product->getAttributeText($attribute->getAttributeCode());
+                  $item['brand'] = $product->getData($attributecode)
+                  .'-'.$product->getAttributeText($attributecode);
                 }
                 else {
                   $item['brand'] = 'empty';
                 }
               }
-              else if (in_array(strtolower($attribute->getAttributeCode()), $this->possiblecolorfields))
+              else if (in_array($attributecodelower, $this->possiblecolorfields))
               {
-                if (!empty($product->getData($attribute->getAttributeCode())))
+                if (!empty($productdata))
                 {
                   $item['color'] = $product->getData($attribute->getAttributeCode())
                   .'-'.$product->getAttributeText($attribute->getAttributeCode());
@@ -138,9 +144,9 @@ class Bikeexchange_Produktexport_Model_Catalog_Product_Api extends Mage_Catalog_
                   $item['color'] = 'empty';
                 }
               }
-              else if (in_array(strtolower($attribute->getAttributeCode()), $this->possiblesizefields))
+              else if (in_array($attributecodelower, $this->possiblesizefields))
               {
-                if (!empty($product->getData($attribute->getAttributeCode())))
+                if (!empty($productdata))
                 {
                   $item['size'] = $product->getData($attribute->getAttributeCode())
                   .'-'.$product->getAttributeText($attribute->getAttributeCode());
@@ -149,9 +155,9 @@ class Bikeexchange_Produktexport_Model_Catalog_Product_Api extends Mage_Catalog_
                   $item['size'] = 'empty';
                 }
               }
-              else if (in_array(strtolower($attribute->getAttributeCode()), $this->possiblegenderfields))
+              else if (in_array($attributecodelower, $this->possiblegenderfields))
               {
-                if (!empty($product->getData($attribute->getAttributeCode())))
+                if (!empty($productdata))
                 {
                   $item['gender'] = $product->getData($attribute->getAttributeCode())
                   .'-'.$product->getAttributeText($attribute->getAttributeCode());
@@ -160,9 +166,9 @@ class Bikeexchange_Produktexport_Model_Catalog_Product_Api extends Mage_Catalog_
                   $item['gender'] = 'empty';
                 }
               }
-              else if (in_array(strtolower($attribute->getAttributeCode()), $this->possibleyearfields))
+              else if (in_array($attributecodelower, $this->possibleyearfields))
               {
-                if (!empty($product->getData($attribute->getAttributeCode())))
+                if (!empty($productdata))
                 {
                   $item['year'] = $product->getData($attribute->getAttributeCode())
                   .'-'.$product->getAttributeText($attribute->getAttributeCode());

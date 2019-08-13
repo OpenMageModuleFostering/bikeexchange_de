@@ -1,7 +1,7 @@
 <config>
   <modules>
     <Bikeexchange_Produktexport>
-      <version>1.0.6</version>
+      <version>2.0.0</version>
     </Bikeexchange_Produktexport>
   </modules>
   <global>
@@ -9,6 +9,11 @@
       <produktexport>
         <class>Bikeexchange_Produktexport_Model</class>
       </produktexport>
+      <checkout>
+        <rewrite>
+          <api_resource_customer>Bikeexchange_Produktexport_Model_Api_Resource_Customer</api_resource_customer>
+        </rewrite>
+      </checkout>
     </models>
     <helpers>
       <produktexport>
