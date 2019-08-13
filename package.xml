@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <package>
     <name>BikeExchange_DE</name>
-    <version>1.0.4</version>
+    <version>1.0.5</version>
     <stability>stable</stability>
     <license uri="http://opensource.org/licenses/osl-3.0.php">Open Software License (OSL)</license>
     <channel>community</channel>
     <extends/>
     <summary>Automating a BikeExchange DE account from the Magento Shop's admin panel.</summary>
     <description>In order to automate a BikeExchange account two SOAP v2 functions are added. One provides stock and price information for frequent usage. The other provides product data for creating adverts on the marketplace.</description>
-    <notes>Using $product-&gt;isAvailable()</notes>
+    <notes>Decreased minimum support PHP version to 5.3.0</notes>
     <authors><author><name>Hagen Schwa&#xDF;</name><user>hagens</user><email>bikeexchange@hagenschwass.name</email></author></authors>
-    <date>2017-05-08</date>
-    <time>09:09:29</time>
-    <contents><target name="mageetc"><dir name="modules"><file name="Bikeexchange_Produktexport.xml" hash="fea0bff88a09bd200e810f7b6b38a888"/></dir></target><target name="magecommunity"><dir name="Bikeexchange"><dir name="Produktexport"><dir name="Helper"><file name="Data.php" hash="6a59185f3a1ecbe68cb845b6525f997d"/></dir><dir name="Model"><dir name="Catalog"><dir name="Product"><dir name="Api"><file name="V2.php" hash="8af7de3830297ee52215de8271de4efe"/></dir><file name="Api.php" hash="bae24392d4a692df5ad5ef5fb661940a"/></dir></dir></dir><dir name="etc"><file name="api.xml" hash="e82ea342aeadaf59d0e96cc3424ab1ae"/><file name="config.xml" hash="30a89ddd993d4b04818eabbf5e9a35ca"/><file name="wsi.xml" hash="c36fb04bea9f0a51162578f8a9aaf431"/></dir></dir></dir></target></contents>
+    <date>2017-05-10</date>
+    <time>10:38:41</time>
+    <contents><target name="mageetc"><dir name="modules"><file name="Bikeexchange_Produktexport.xml" hash="fea0bff88a09bd200e810f7b6b38a888"/></dir></target><target name="magecommunity"><dir name="Bikeexchange"><dir name="Produktexport"><dir name="Helper"><file name="Data.php" hash="6a59185f3a1ecbe68cb845b6525f997d"/></dir><dir name="Model"><dir name="Catalog"><dir name="Product"><dir name="Api"><file name="V2.php" hash="8af7de3830297ee52215de8271de4efe"/></dir><file name="Api.php" hash="bae24392d4a692df5ad5ef5fb661940a"/></dir></dir></dir><dir name="etc"><file name="api.xml" hash="e82ea342aeadaf59d0e96cc3424ab1ae"/><file name="config.xml" hash="2c7c96313f17957cf41752d8df9545d0"/><file name="wsi.xml" hash="c36fb04bea9f0a51162578f8a9aaf431"/></dir></dir></dir></target></contents>
     <compatible/>
-    <dependencies><required><php><min>5.4.0</min><max>5.6.9</max></php><package><name>Mage_Core_Modules</name><channel>community</channel><min>1.6.0.0</min><max>1.9.3.2</max></package></required></dependencies>
+    <dependencies><required><php><min>5.3.0</min><max>5.6.9</max></php><package><name>Mage_Core_Modules</name><channel>community</channel><min>1.6.0.0</min><max>1.9.3.2</max></package></required></dependencies>
 </package>
