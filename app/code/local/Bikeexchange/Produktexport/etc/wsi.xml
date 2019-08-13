@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:typens="urn:{{var wsdl.name}}"
+             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+             xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+             xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+             xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+             name="{{var wsdl.name}}"
+             targetNamespace="urn:{{var wsdl.name}}">
+    <wsdl:types>
+        <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:{{var wsdl.name}}">
+            <xsd:complexType name="bikeexchangeAvailabilityArray">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" maxOccurs="unbounded" name="complexObjectArray" type="typens:bikeexchangeAvailability" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="bikeexchangeAvailability">
+                <xsd:sequence>
+                    <xsd:element name="product_id" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="type_id" type="xsd:string" />
+                    <xsd:element name="sku" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="barcode" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="status" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="visibility" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="price" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="special_price" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="special_from_date" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="special_to_date" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="tier_price" type="typens:catalogProductTierPriceEntityArray" minOccurs="0" />
+                    <xsd:element name="qty" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="is_in_stock" type="xsd:string" minOccurs="0" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="bikeexchangeProductArray">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" maxOccurs="unbounded" name="complexObjectArray" type="typens:bikeexchangeProduct" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="bikeexchangeProduct">
+                <xsd:sequence>
+                  <xsd:element name="product_id" type="xsd:string" minOccurs="0" />
+                  <xsd:element name="sku" type="xsd:string" minOccurs="0" />
+                  <xsd:element name="barcode" type="xsd:string" minOccurs="0" />
+                  <xsd:element name="categories" type="typens:ArrayOfString" minOccurs="0" />
+                  <xsd:element name="websites" type="typens:ArrayOfString" minOccurs="0" />
+                  <xsd:element name="type_id" type="xsd:string" minOccurs="0" />
+                  <xsd:element name="name" type="xsd:string" minOccurs="0" />
+                  <xsd:element name="brand" type="xsd:string" minOccurs="0" />
+                  <xsd:element name="description" type="xsd:string" minOccurs="0" />
+                  <xsd:element name="short_description" type="xsd:string" minOccurs="0" />
+                  <xsd:element name="color" type="xsd:string" minOccurs="0" />
+                  <xsd:element name="size" type="xsd:string" minOccurs="0" />
+                  <xsd:element name="gender" type="xsd:string" minOccurs="0" />
+                  <xsd:element name="year" type="xsd:string" minOccurs="0" />
+                  <xsd:element name="status" type="xsd:string" minOccurs="0" />
+                  <xsd:element name="product_url" type="xsd:string" minOccurs="0" />
+                  <xsd:element name="visibility" type="xsd:string" minOccurs="0" />
+                  <xsd:element name="price" type="xsd:string" minOccurs="0" />
+                  <xsd:element name="special_price" type="xsd:string" minOccurs="0" />
+                  <xsd:element name="special_from_date" type="xsd:string" minOccurs="0" />
+                  <xsd:element name="special_to_date" type="xsd:string" minOccurs="0" />
+                  <xsd:element name="tier_price" type="typens:catalogProductTierPriceEntityArray" minOccurs="0" />
+                  <xsd:element name="meta_title" type="xsd:string" minOccurs="0" />
+                  <xsd:element name="meta_description" type="xsd:string" minOccurs="0" />
+                  <xsd:element name="qty" type="xsd:string" minOccurs="0" />
+                  <xsd:element name="is_in_stock" type="xsd:string" minOccurs="0" />
+                  <xsd:element name="image_url" type="xsd:string" minOccurs="0" />
+                  <xsd:element name="images" type="typens:catalogProductImageEntityArray" minOccurs="0" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:element name="bikeexchangeAvailabilityRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="store" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="bikeexchangeAvailabilityResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="typens:bikeexchangeAvailabilityArray" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="bikeexchangeProductRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="store" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="bikeexchangeProductResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="typens:bikeexchangeProductArray" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="bikeexchangeProduktexportAvailabilityRequest">
+        <wsdl:part name="parameters" element="typens:bikeexchangeAvailabilityRequestParam" />
+    </wsdl:message>
+    <wsdl:message name="bikeexchangeProduktexportAvailabilityResponse">
+        <wsdl:part name="parameters" element="typens:bikeexchangeAvailabilityResponseParam" />
+    </wsdl:message>
+    <wsdl:message name="bikeexchangeProduktexportProductRequest">
+        <wsdl:part name="parameters" element="typens:bikeexchangeProductRequestParam" />
+    </wsdl:message>
+    <wsdl:message name="bikeexchangeProduktexportProductResponse">
+        <wsdl:part name="parameters" element="typens:bikeexchangeProductResponseParam" />
+    </wsdl:message>
+    <wsdl:portType name="{{var wsdl.handler}}PortType">
+      <wsdl:operation name="bikeexchangeProduktexportAvailability">
+          <wsdl:documentation>Bikeexchange Availability Feed</wsdl:documentation>
+          <wsdl:input message="typens:bikeexchangeProduktexportAvailabilityRequest" />
+          <wsdl:output message="typens:bikeexchangeProduktexportAvailabilityResponse" />
+      </wsdl:operation>
+      <wsdl:operation name="bikeexchangeProduktexportProduct">
+          <wsdl:documentation>Bikeexchange Product Feed</wsdl:documentation>
+          <wsdl:input message="typens:bikeexchangeProduktexportProductRequest" />
+          <wsdl:output message="typens:bikeexchangeProduktexportProductResponse" />
+      </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="{{var wsdl.handler}}Binding" type="typens:{{var wsdl.handler}}PortType">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+        <wsdl:operation name="bikeexchangeProduktexportAvailability">
+            <soap:operation soapAction="" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="bikeexchangeProduktexportProduct">
+            <soap:operation soapAction="" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="{{var wsdl.name}}Service">
+        <wsdl:port name="{{var wsdl.handler}}Port" binding="typens:{{var wsdl.handler}}Binding">
+            <soap:address location="{{var wsdl.url}}" />
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

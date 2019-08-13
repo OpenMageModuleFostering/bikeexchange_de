@@ -1,0 +1,34 @@
+<config>
+  <api>
+    <resources>
+      <bikeexchange_products translate="title" module="produktexport">
+        <model>produktexport/catalog_product_api</model>
+        <title>Bikeexchange Feed API</title>
+        <acl>bikeexchangeupdateserice</acl>
+        <methods>
+          <availability translate="title" module="produktexport">
+            <title>Availability Feed</title>
+            <method>availabilityFeed</method>
+          </availability>
+          <product translate="title" module="produktexport">
+            <title>Product Feed</title>
+            <method>productFeed</method>
+          </product>
+        </methods>
+      </bikeexchange_products>
+    </resources>
+    <v2>
+      <resources_function_prefix>
+        <bikeexchange_products>bikeexchangeProduktexport</bikeexchange_products>
+      </resources_function_prefix>
+    </v2>
+    <acl>
+      <resources>
+        <bikeexchangeupdateserice translate="title" module="produktexport">
+          <title>Bikeexchange Update Service</title>
+          <sort_order>5</sort_order>
+        </bikeexchangeupdateserice>
+      </resources>
+    </acl>
+  </api>
+</config>

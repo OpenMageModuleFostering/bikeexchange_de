@@ -1,0 +1,19 @@
+<config>
+  <modules>
+    <Bikeexchange_Produktexport>
+      <version>1.0.0</version>
+    </Bikeexchange_Produktexport>
+  </modules>
+  <global>
+    <models>
+      <produktexport>
+        <class>Bikeexchange_Produktexport_Model</class>
+      </produktexport>
+    </models>
+    <helpers>
+      <produktexport>
+        <class>Bikeexchange_Produktexport_Helper</class>
+      </produktexport>
+    </helpers>
+  </global>
+</config>

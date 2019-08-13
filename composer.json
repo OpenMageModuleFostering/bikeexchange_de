@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/BikeExchange_DE",
+    "type": "magento-module",
+    "license": "Open-Software-License-(OSL)",
+    "homepage": "",
+    "description": "Stellt Funktionen für den BikeExchange DE Update Service bereit.",
+    "authors": [
+    {
+        "name": "Hagen Schwa\u00df",
+        "email": "bikeexchange@hagenschwass.name"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

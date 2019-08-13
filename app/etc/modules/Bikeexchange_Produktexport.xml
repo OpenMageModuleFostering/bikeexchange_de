@@ -1,0 +1,8 @@
+<config>
+  <modules>
+    <Bikeexchange_Produktexport>
+      <active>true</active>
+      <codePool>local</codePool>
+    </Bikeexchange_Produktexport>
+  </modules>
+</config>

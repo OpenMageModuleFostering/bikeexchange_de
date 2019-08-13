@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package>
+    <name>BikeExchange_DE</name>
+    <version>1.0.0</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/osl-3.0.php">Open Software License (OSL)</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Stellt Funktionen f&#xFC;r den BikeExchange DE Update Service bereit.</summary>
+    <description>Die Extension ist f&#xFC;r BikeExchange DE Kunden, die den BikeExchange Update Service nutzen wollen. Der BikeExchange Update Service aktualisiert Lagerbest&#xE4;nde, Angebotspreise und organisiert die Auftragsabwicklung. Au&#xDF;erdem werden Produktdaten bereitgestellt.</description>
+    <notes>Productfeed&#xD;
+Availabilityfeed</notes>
+    <authors><author><name>Hagen Schwa&#xDF;</name><user>hagens</user><email>bikeexchange@hagenschwass.name</email></author></authors>
+    <date>2017-02-16</date>
+    <time>16:39:50</time>
+    <contents><target name="magelocal"><dir name="Bikeexchange"><dir name="Produktexport"><dir name="Helper"><file name="Data.php" hash="6a59185f3a1ecbe68cb845b6525f997d"/></dir><dir name="Model"><dir name="Catalog"><dir name="Product"><dir name="Api"><file name="V2.php" hash="8af7de3830297ee52215de8271de4efe"/></dir><file name="Api.php" hash="c045b16d7fca72a020f4c54cf04a30ce"/></dir></dir></dir><dir name="etc"><file name="api.xml" hash="e82ea342aeadaf59d0e96cc3424ab1ae"/><file name="config.xml" hash="400664fde2261f4a74713a81dc8ef0b2"/><file name="wsi.xml" hash="a42fe0c0091a18e3ca36039c604afcfe"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Bikeexchange_Produktexport.xml" hash="3f65e0b66b7a7e7dc690dded74491885"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.4.0</min><max>5.6.0</max></php></required></dependencies>
+</package>
