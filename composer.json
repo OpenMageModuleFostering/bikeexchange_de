@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/BikeExchange_DE",
+    "name": "OpenMageModuleFostering\/BikeExchange_DE",
     "type": "magento-module",
     "license": "Open-Software-License-(OSL)",
     "homepage": "",
     "description": "Automating a BikeExchange DE account from the Magento Shop's admin panel.",
     "authors": [
-    {
-        "name": "Hagen Schwa\u00df",
-        "email": "bikeexchange@hagenschwass.name"
-    }
-],
+        {
+            "name": "Hagen Schwa\u00df",
+            "email": "bikeexchange@hagenschwass.name"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
