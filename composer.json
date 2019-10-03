@@ -1,7 +1,7 @@
 {
-    "name": "OpenMageModuleFostering\/BikeExchange_DE",
+    "name": "openmage-module-fostering\/bikeexchange_de",
     "type": "magento-module",
-    "license": "Open-Software-License-(OSL)",
+    "license": "OSL-3.0",
     "homepage": "",
     "description": "Automating a BikeExchange DE account from the Magento Shop's admin panel.",
     "authors": [
